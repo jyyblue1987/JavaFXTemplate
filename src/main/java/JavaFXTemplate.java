@@ -1,5 +1,6 @@
 import javafx.application.Application;
 
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -43,35 +44,26 @@ public class JavaFXTemplate extends Application {
 
 		// TODO Auto-generated method stub
 		primaryStage.setTitle("Welcome to JavaFX");
-
 		textField2.setEditable(false);
-
-		EventHandler<MouseEvent> eventHandler1 = new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(MouseEvent e) {
-
-				String content = textField1.getText() + ": from the center text field!";
-				textField2.setText(content);
-				button1.setDisable(true);
-				button1.setText("pressed");
-			}
-		};
-		button1.addEventHandler(MouseEvent.MOUSE_CLICKED,eventHandler1);
-
-		EventHandler<MouseEvent> eventHandler2 = new EventHandler<MouseEvent>() {
-			@Override
-			public void handle(MouseEvent e) {
-				textField1.setText("");
-				textField2.setText("");
-				textField2.setText("final string goes here");
-				button1.setDisable(false);
-				button1.setText("button1");
-			}
-		};
-		button2.addEventHandler(MouseEvent.MOUSE_CLICKED,eventHandler2);
 		Scene scene = new Scene(parent, 800,505);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
+
+	@FXML protected void handleButton1Action(ActionEvent event) {
+		String content = textField1.getText() + ": from the center text field!";
+		textField2.setText(content);
+		button1.setDisable(true);
+		button1.setText("pressed");
+	}
+
+	@FXML protected void handleButton2Action(ActionEvent event) {
+		textField1.setText("");
+		textField2.setText("");
+		textField2.setText("final string goes here");
+		button1.setDisable(false);
+		button1.setText("button1");
+	}
+
 
 }
