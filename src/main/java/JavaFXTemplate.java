@@ -62,7 +62,7 @@ public class JavaFXTemplate extends Application {
 		textField2.setText("");
 		textField2.setText("final string goes here");
 		button1.setDisable(false);
-		button1.setText("button1");
+		button1.setText("button 1");
 	}
 
 

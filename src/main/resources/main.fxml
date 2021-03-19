@@ -6,18 +6,16 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="505.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="JavaFXTemplate"
-   >
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="214.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFXTemplate">
    <left>
       <VBox fx:id="buttonbox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="button1" mnemonicParsing="false" onAction="#handleButton1Action" text="Button1">
+            <Button fx:id="button1" mnemonicParsing="false" onAction="#handleButton1Action" text="button 1">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="button2" mnemonicParsing="false" onAction="#handleButton2Action" text="Button2">
+            <Button fx:id="button2" mnemonicParsing="false" onAction="#handleButton2Action" text="button 2">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
@@ -26,14 +24,14 @@
       </VBox>
    </left>
    <center>
-      <TextField fx:id="textField1" BorderPane.alignment="CENTER">
+      <TextField fx:id="textField1" prefHeight="25.0" prefWidth="211.0" promptText="enter text here then press button 1" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets left="10.0" right="10.0" />
          </BorderPane.margin>
       </TextField>
    </center>
    <right>
-      <TextField fx:id="textField2" editable="false" BorderPane.alignment="CENTER">
+      <TextField fx:id="textField2" disable="true" editable="false" prefHeight="25.0" prefWidth="240.0" text="final string goes here" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets left="10.0" right="10.0" />
          </BorderPane.margin>
